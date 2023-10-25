@@ -11,7 +11,7 @@ export default function Input({
     placeholder?: string,
     className: string,
     type: string,
-    label: React.ReactNode,
+    label?: React.ReactNode,
     labelHidden?: boolean
 }) {
     return (
@@ -21,7 +21,7 @@ export default function Input({
                 "border rounded-lg",
                 'bg-zinc-50',
                 'p-2',
-                className
+                'w-full'
             )} {...props} />
         </label>
     )

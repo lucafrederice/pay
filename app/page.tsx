@@ -83,7 +83,7 @@ export default function Home() {
           <div className="flex flex-col gap-2">
             <span className="text-sm font-semibold">Billing Address</span>
             <label className="flex items-center">
-              <Input type="checkbox" className="mr-2" label="Billing Address" />
+              <Input type="checkbox" className="mr-2 accent-purple-900" />
               Same as Home Address
             </label>
           </div>
