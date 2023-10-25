@@ -1,4 +1,5 @@
 import Icon from "./brand/icon";
+import Input from "./components/input";
 import { w } from "./functions/w";
 
 export default function Home() {
@@ -54,35 +55,35 @@ export default function Home() {
           <div className="flex flex-col gap-2">
             <span className="text-sm font-semibold">Contact Information</span>
             <div className="flex gap-2">
-              <input type="text" placeholder="First Name" className="border p-2 rounded w-1/2" />
-              <input type="text" placeholder="Last Name" className="border p-2 rounded w-1/2" />
+              <Input type="text" placeholder="First Name" className="w-1/2" />
+              <Input type="text" placeholder="Last Name" className="w-1/2" />
             </div>
-            <input type="email" placeholder="Email" className="border p-2 rounded w-full" />
-            <input type="text" placeholder="Phone Number (optional)" className="border p-2 rounded w-full" />
+            <Input type="email" placeholder="Email" className="w-full" />
+            <Input type="text" placeholder="Phone Number (optional)" className="w-full" />
           </div>
           <div className="flex flex-col gap-2">
             <span className="text-sm font-semibold">Home Address</span>
-            <input type="text" placeholder="Address Line 1" className="border p-2 rounded w-full" />
-            <input type="text" placeholder="Address Line 2 (optional)" className="border p-2 rounded w-full" />
+            <Input type="text" placeholder="Address Line 1" className="w-full" />
+            <Input type="text" placeholder="Address Line 2 (optional)" className="w-full" />
             <div className="flex gap-2">
-              <input type="text" placeholder="City" className="border p-2 rounded w-1/3" />
-              <input type="text" placeholder="State" className="border p-2 rounded w-1/3" />
-              <input type="text" placeholder="Zipcode" className="border p-2 rounded w-1/3" />
+              <Input type="text" placeholder="City" className="w-1/3" />
+              <Input type="text" placeholder="State" className="w-1/3" />
+              <Input type="text" placeholder="Zipcode" className="w-1/3" />
             </div>
           </div>
           <div className="flex flex-col gap-2">
             <span className="text-sm font-semibold">Card Information</span>
-            <input type="text" placeholder="Name on Card" className="border p-2 rounded w-full" />
+            <Input type="text" placeholder="Name on Card" className="w-full" />
             <div className="flex gap-2">
-              <input type="text" placeholder="Card number" className="border p-2 rounded w-2/3" />
-              <input type="text" placeholder="MM/YY" className="border p-2 rounded w-1/6" />
-              <input type="text" placeholder="CVV" className="border p-2 rounded w-1/6" />
+              <Input type="text" placeholder="Card number" className="w-2/3" />
+              <Input type="text" placeholder="MM/YY" className="w-1/6" />
+              <Input type="text" placeholder="CVV" className="w-1/6" />
             </div>
           </div>
           <div className="flex flex-col gap-2">
             <span className="text-sm font-semibold">Billing Address</span>
             <label className="flex items-center">
-              <input type="checkbox" className="mr-2" />
+              <Input type="checkbox" className="mr-2" />
               Same as Home Address
             </label>
           </div>
