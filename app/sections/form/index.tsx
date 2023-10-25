@@ -1,10 +1,11 @@
 import Input from "../../components/input";
 import { w } from "../../functions/w";
 import { CheckIcon } from "@heroicons/react/24/solid";
-import useBillingAddress from "./store/billingAddress";
 import BillingAddressSetter from "./billingAddressSetter";
+import { useSearchParams } from "next/navigation";
 
 export default function Form({ className }: { className?: string }) {
+    const searchParams = useSearchParams()
 
     if (false)
         return (
@@ -137,7 +138,7 @@ export default function Form({ className }: { className?: string }) {
                 <span className="text-sm font-semibold">Billing Address</span>
                 <BillingAddressSetter />
                 {
-                    useBillingAddress.getState().type === "custom" && (
+                    searchParams.get("type") === "custom" && (
                         <div className="flex flex-col gap-2 ">
                             <Input required type="text" placeholder="Address Line 1" label={<span className="sr-only">Address Line 1</span>} className="w-full" />
                             <Input required type="text" placeholder="Address Line 2 (optional)" label={<span className="sr-only">Address Line 2 (optional)</span>} className="w-full" />
