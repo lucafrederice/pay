@@ -1,32 +1,43 @@
-import { w } from "../functions/w"
+import React, { InputHTMLAttributes, FC } from 'react';
+import { w } from "../functions/w";
 
-export default function Input({
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+    className: string;
+    label?: React.ReactNode;
+    error?: string;
+    showLabel?: boolean;
+    inputClassName?: string;
+}
+
+const Input: FC<InputProps> = ({
     placeholder,
     className,
-    type,
+    type = 'text',
     label,
-    labelHidden = true,
     error = '',
+    inputClassName,
+    showLabel = false,
     ...props
-}: {
-    placeholder?: string,
-    className: string,
-    type: string,
-    label?: React.ReactNode,
-    labelHidden?: boolean,
-    error?: string,
-}) {
+}) => {
     return (
         <label className={w(className)}>
-            <span className={w(labelHidden && 'sr-only')}>{label}</span>
-            <input type={type} placeholder={placeholder} className={w(
-                "border rounded-lg",
-                'bg-sky-50/40',
-                'p-2',
-                'w-full',
-                'invalid:bg-orange-50/50 invalid:border-orange-100'
-            )} {...props} />
-            <div><span className="text-xs text-orange-600">{error}</span></div>
+            <input
+                type={type}
+                placeholder={placeholder}
+                className={w(
+                    "border rounded-lg",
+                    'bg-sky-50/40',
+                    'p-2',
+                    'w-full',
+                    'invalid:bg-orange-50/50 invalid:border-orange-100',
+                    inputClassName
+                )}
+                {...props}
+            />
+            {showLabel && label}
+            {error && <div><span className="text-xs text-orange-600">{error}</span></div>}
         </label>
-    )
+    );
 }
+
+export default Input;
