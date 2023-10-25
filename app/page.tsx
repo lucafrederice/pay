@@ -55,35 +55,35 @@ export default function Home() {
           <div className="flex flex-col gap-2">
             <span className="text-sm font-semibold">Contact Information</span>
             <div className="flex gap-2">
-              <Input type="text" placeholder="First Name" className="w-1/2" />
-              <Input type="text" placeholder="Last Name" className="w-1/2" />
+              <Input type="text" placeholder="First Name" label="First Name" className="w-1/2" />
+              <Input type="text" placeholder="Last Name" label="Last Name" className="w-1/2" />
             </div>
-            <Input type="email" placeholder="Email" className="w-full" />
-            <Input type="text" placeholder="Phone Number (optional)" className="w-full" />
+            <Input type="email" placeholder="Email" label="Email" className="w-full" />
+            <Input type="text" placeholder="Phone Number (optional)" label='Phone Number (optional)' className="w-full" />
           </div>
           <div className="flex flex-col gap-2">
             <span className="text-sm font-semibold">Home Address</span>
-            <Input type="text" placeholder="Address Line 1" className="w-full" />
-            <Input type="text" placeholder="Address Line 2 (optional)" className="w-full" />
+            <Input type="text" placeholder="Address Line 1" label="Address Line 1" className="w-full" />
+            <Input type="text" placeholder="Address Line 2 (optional)" label="Address Line 2 (optional)" className="w-full" />
             <div className="flex gap-2">
-              <Input type="text" placeholder="City" className="w-1/3" />
-              <Input type="text" placeholder="State" className="w-1/3" />
-              <Input type="text" placeholder="Zipcode" className="w-1/3" />
+              <Input type="text" placeholder="City" label="City" className="w-1/3" />
+              <Input type="text" placeholder="State" label="State" className="w-1/3" />
+              <Input type="text" placeholder="Zipcode" label="Zipcode" className="w-1/3" />
             </div>
           </div>
           <div className="flex flex-col gap-2">
             <span className="text-sm font-semibold">Card Information</span>
-            <Input type="text" placeholder="Name on Card" className="w-full" />
+            <Input type="text" placeholder="Name on Card" label="Name on Card" className="w-full" />
             <div className="flex gap-2">
-              <Input type="text" placeholder="Card number" className="w-2/3" />
-              <Input type="text" placeholder="MM/YY" className="w-1/6" />
-              <Input type="text" placeholder="CVV" className="w-1/6" />
+              <Input type="text" placeholder="Card number" label="Card number" className="w-2/3" />
+              <Input type="text" placeholder="MM/YY" label="MM/YY" className="w-1/6" />
+              <Input type="text" placeholder="CVV" label='CVV' className="w-1/6" />
             </div>
           </div>
           <div className="flex flex-col gap-2">
             <span className="text-sm font-semibold">Billing Address</span>
             <label className="flex items-center">
-              <Input type="checkbox" className="mr-2" />
+              <Input type="checkbox" className="mr-2" label="Billing Address" />
               Same as Home Address
             </label>
           </div>

@@ -4,18 +4,25 @@ export default function Input({
     placeholder,
     className,
     type,
+    label,
+    labelHidden = true,
     ...props
 }: {
     placeholder?: string,
     className: string,
-    type: string
+    type: string,
+    label: React.ReactNode,
+    labelHidden?: boolean
 }) {
     return (
-        <input type={type} placeholder={placeholder} className={w(
-            "border rounded-lg",
-            'bg-zinc-50',
-            'p-2',
-            className
-        )} {...props} />
+        <label className={w(className)}>
+            <span className={w(labelHidden && 'sr-only')}>{label}</span>
+            <input type={type} placeholder={placeholder} className={w(
+                "border rounded-lg",
+                'bg-zinc-50',
+                'p-2',
+                className
+            )} {...props} />
+        </label>
     )
 }
