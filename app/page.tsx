@@ -48,7 +48,7 @@ export default function Home() {
           <div>
             <h2 className="text-lg font-semibold">Select Payment Method</h2>
             <div className="flex justify-between border rounded-xl p-1 font-semibold">
-              <button className="bg-purple-500 text-white rounded-lg px-4 py-2 w-full">CARD</button>
+              <button className="bg-purple-950 text-white rounded-lg px-4 py-2 w-full">CARD</button>
               <button className="rounded px-4 py-2 w-full">ACH</button>
             </div>
           </div>
@@ -83,12 +83,19 @@ export default function Home() {
           <div className="flex flex-col gap-2">
             <span className="text-sm font-semibold">Billing Address</span>
             <label className="flex items-center">
-              <Input type="checkbox" className="mr-2 accent-purple-900" />
+              <Input type="checkbox" className="mr-2 accent-purple-950" />
               Same as Home Address
             </label>
+            <Input type="text" placeholder="Address Line 1" label="Address Line 1" className="w-full" />
+            <Input type="text" placeholder="Address Line 2 (optional)" label="Address Line 2 (optional)" className="w-full" />
+            <div className="flex gap-2">
+              <Input type="text" placeholder="City" label="City" className="w-1/3" />
+              <Input type="text" placeholder="State" label="State" className="w-1/3" />
+              <Input type="text" placeholder="Zipcode" label="Zipcode" className="w-1/3" />
+            </div>
           </div>
           <div className="flex flex-col gap-4">
-            <button className="bg-purple-500 text-white rounded px-4 py-2 w-full mt-4">Pay $100.00 USD</button>
+            <button className="bg-purple-950 text-white rounded px-4 py-2 w-full mt-4">Pay $100.00 USD</button>
             <p className="text-xs text-center">By submitting this payment you agree to the privacy policy, refund policy, and terms of service.</p>
           </div>
         </form>
@@ -98,7 +105,7 @@ export default function Home() {
             <Icon alt="Pay Theory" className="h-auto w-24 -mt-3 not-sr-only" />
             <span className="sr-only">Pay Theory</span>
           </span>
-          <p className="text-xs mt-2">Pay Theory is an inclusive payments provider. <a href="" className="text-purple-700">Learn more about inclusive payments.</a></p>
+          <p className="text-xs mt-2">Pay Theory is an inclusive payments provider. <a href="" className="text-purple-950">Learn more about inclusive payments.</a></p>
         </footer>
       </div>
     </div>
