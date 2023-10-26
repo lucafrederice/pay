@@ -2,7 +2,7 @@ import React, { InputHTMLAttributes, FC } from 'react';
 import { w } from "../functions/w";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
-    className: string;
+    className?: string;
     label?: React.ReactNode;
     error?: string;
     showLabel?: boolean;
