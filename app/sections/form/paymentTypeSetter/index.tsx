@@ -18,7 +18,6 @@ export default function PaymentTypeSetter({
 
     return (
         <Input
-            required
             type="checkbox"
             value={value}
             name={name}
@@ -39,7 +38,7 @@ export default function PaymentTypeSetter({
             checked={ value === "ach" ? searchParams.get("ptype") === "ach" : searchParams.get("ptype") !== "ach"}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                 router.push(
-                    pathname + '?' + (searchParams.get('ptype') === "ach" ? removeQueryString("ptype", searchParams) : createQueryString('ptype', "ach", searchParams)),
+                    (pathname === "" ? "/" : pathname) + '?' + (searchParams.get('ptype') === "ach" ? removeQueryString("ptype", searchParams) : createQueryString('ptype', "ach", searchParams)),
                     {
                         scroll: false
                     }

@@ -21,7 +21,7 @@ export default function BillingAddressSetter() {
             checked={searchParams.get("type") !== "custom"}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                 router.push(
-                    pathname + '?' + (searchParams.get('type') === "custom" ? removeQueryString("type", searchParams) : createQueryString('type', "custom", searchParams)),
+                    (pathname === "" ? "/" : pathname) + '?' + (searchParams.get('type') === "custom" ? removeQueryString("type", searchParams) : createQueryString('type', "custom", searchParams)),
                     {
                         scroll: false
                     }
