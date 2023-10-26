@@ -13,11 +13,12 @@ export default function BillingAddressSetter() {
         <Input
             required
             type="checkbox"
+            value="sameBillingAddress"
             className="accent-purple-950 flex items-center gap-2 w-fit"
             inputClassName="w-fit"
             label={<span>Same as Home Address</span>}
             showLabel
-            checked={searchParams.get("type") === "custom"}
+            checked={searchParams.get("type") !== "custom"}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                 router.push(
                     pathname + '?' + (searchParams.get('type') === "custom" ? removeQueryString("type", searchParams) : createQueryString('type', "custom", searchParams)),
